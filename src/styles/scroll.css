@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * scrollbar 🍫
+ */
+.contentMain ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.contentMain ::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 dark:bg-emerald-500;
+  border-radius: 2px;
+  background-clip: padding-box;
+}

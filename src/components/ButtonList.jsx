@@ -25,9 +25,9 @@ const ButtonList = () => {
         {buttonList.length > 0 ? "Tap a button!" : "Oops! Button not found"}
       </h2>
       <section
-        className={`h-[20vh] md:h-[22vh] lg:h-[${
-          selectButton ? "30vh" : "70vh"
-        }] overflow-y-scroll overflow-x-hidden mx-2 md:mx-7 lg:mx-14 xl:mx-27 2xl:mx-56 px-12 md:px-8 lg:px-auto xl:px-auto 2xl:px-12`}
+        className={`h-[20vh] md:h-[22vh] ${
+          selectButton ? "lg:h-[30vh]" : "lg:h-[70vh]"
+        } overflow-y-scroll overflow-x-hidden mx-2 md:mx-7 lg:mx-14 xl:mx-27 2xl:mx-56 px-12 md:px-8 lg:px-auto xl:px-auto 2xl:px-12`}
       >
         <div
           className={`grid place-content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-24 md:gap-28`}

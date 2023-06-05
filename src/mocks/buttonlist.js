@@ -246,4 +246,67 @@ export const buttonlist = [
         }
       `,
   },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
+  {
+    name: "VerticalRotate",
+    class: "btnHorizontalRotate",
+    snippet: `
+        .btnVerticalRotate {
+          ayuda es DEMASIADO SEXOOoOoOo2
+        }
+      `,
+  },
 ];
