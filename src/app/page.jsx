@@ -1,27 +1,26 @@
 // 🧩 components
-import ButtonItem from "@/components/ButtonItem";
 import ShowSnipet from "@/components/ShowSnipet";
-
-// 📃 mocks
-import { buttonlist } from "@/mocks/buttonlist.js";
+import ButtonList from "@/components/ButtonList";
+import SearchInputMobile from "@/components/SearchInputMobile";
 
 // 🌿 context
 import { SelectProvider } from "@/context/SelectProvider";
 
-const Home = () => {
-  const buttonList = buttonlist;
+// ✨ styles
+import "@/styles/scroll.css";
 
+const Home = () => {
   return (
     <>
-      <main className="mt-24 px-auto">
+      <main className="mt-20 px-auto contentMain">
         <SelectProvider>
-          <section className="grid place-content-center px-14 md:px-auto lg:px-14 xl:px-28 2xl:px-56 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-24 md:gap-36 lg:gap-28">
-            {buttonList.map((button, index) => (
-              <ButtonItem button={button} key={index} scale="100" />
-            ))}
-          </section>
+          <div className="flex flex-col space-y-14 md:space-y-20 lg:space-y-12 lg:block">
+            <SearchInputMobile />
 
-          <ShowSnipet />
+            <ShowSnipet />
+
+            <ButtonList />
+          </div>
         </SelectProvider>
       </main>
     </>

@@ -1,6 +1,9 @@
 "use client";
 
+// ✨ styles
 import "@/styles/buttons.css";
+
+// 🌿 context
 import { useButtonUpdateContext } from "@/context/SelectProvider";
 
 const ButtonItem = ({ button, scale }) => {
@@ -8,10 +11,10 @@ const ButtonItem = ({ button, scale }) => {
 
   return (
     <button
-      className={`text-white px-[30px] py-[20px] border-none outline-none ${button.class} scale-${scale}`}
-      onClick={() => updateButton(button.name)}
+      className={`text-white px-[30px] py-[20px] border-none outline-none ${button?.class} scale-${scale}`}
+      onClick={() => updateButton(button?.name)}
     >
-      {button.name}
+      {button?.name}
     </button>
   );
 };

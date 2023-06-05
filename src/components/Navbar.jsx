@@ -4,14 +4,16 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-// ❤ assets
+// ✨ assets
 import BmcIcon from "@/components/icons/BmcIcon";
 import SunIcon from "@/components/icons/SunIcon";
 import MoonIcon from "@/components/icons/MoonIcon";
-import SearchIcon from "@/components/icons/SearchIcon";
 import HamburguerIcon from "@/components/icons/HamburguerIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
 import KCapLogo from "@/components/icons/KCapLogo";
+
+// 🧩 components
+import SearchInputDesktop from "./SearchInputDesktop";
 
 const initialThemeState = () => {
   if (localStorage.getItem("theme") !== ("dark" || "light")) {
@@ -71,7 +73,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center py-2 px-5">
           <Link
             href="/"
-            className="flex flex-shrink-0 title-font font-medium items-center text-gray-900 md:mb-0 hover:scale-110 duration-300"
+            className="flex flex-nowrap title-font font-medium items-center text-gray-900 md:mb-0 hover:scale-110 duration-300"
           >
             <KCapLogo
               width={40}
@@ -83,14 +85,7 @@ const Navbar = () => {
           </Link>
 
           {/* Navigation for desktop  */}
-          <section className="hidden lg:flex lg:items-center">
-            <input
-              type="text"
-              placeholder="Search a button"
-              className="relative p-2 bg-transparent hover:ring-2 rounded hover:ring-gray-300 focus:ring-0 duration-300"
-            />
-            <SearchIcon className="cursor-pointer absolute left-[52%]" />
-          </section>
+          {pathname === "/" && <SearchInputDesktop />}
 
           <section className="hidden lg:flex space-x-2">
             <button
@@ -141,15 +136,6 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col items-center gap-7">
-              <div>
-                <input
-                  id="filter"
-                  type="text"
-                  placeholder="Search a button"
-                  className="p-2 bg-transparent w-full text-center text-xs md:text-md"
-                />
-              </div>
-
               <div className="flex items-center justify-center text-base tracking-wide">
                 <Link
                   href="/"
