@@ -73,7 +73,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center py-2 px-5">
           <Link
             href="/"
-            className="flex flex-nowrap title-font font-medium items-center text-gray-900 md:mb-0 hover:scale-110 duration-300"
+            className="flex flex-nowrap title-font font-medium items-center text-gray-900 md:mb-0"
           >
             <KCapLogo
               width={40}
@@ -107,7 +107,7 @@ const Navbar = () => {
                 href="/contact"
                 className={`peer text-center mx-4 text-sm duration-300`}
               >
-                Contact with us
+                Contact
               </Link>
             </nav>
 
@@ -158,7 +158,7 @@ const Navbar = () => {
                       : ""
                   }`}
                 >
-                  Contact with us
+                  Contact
                 </Link>
               </div>
 

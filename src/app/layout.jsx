@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`bg-secondary dark:bg-primary overflow-x-hidden overflow-y-scroll lg:overflow-y-hidden ${inter.className}`}
+        className={`bg-secondary dark:bg-primary overflow-x-hidden overflow-y-scroll md:overflow-y-hidden ${inter.className}`}
       >
         <SearchProvider>
           <Navbar />

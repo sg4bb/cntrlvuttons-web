@@ -31,7 +31,7 @@ const SearchInputDesktop = () => {
         type="text"
         value={currentSearch}
         placeholder="Search a button"
-        className="p-2 bg-transparent hover:ring-2 rounded hover:ring-gray-300 focus:ring-0 w-[250px] duration-300"
+        className="p-2 bg-transparent hover:ring-2 rounded hover:ring-gray-300 focus:outline-1 focus:outline-gray-300 focus:ring-0 w-[250px] duration-300"
         onChange={(e) =>
           setControlSearch(e.target.value.toLocaleLowerCase().trim())
         }
