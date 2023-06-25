@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <main className="mt-20 px-auto contentMain">
         <SelectProvider>
-          <div className="flex flex-col space-y-14 md:space-y-20 lg:space-y-12 lg:block">
+          <div className="flex flex-col space-y-8 md:space-y-12 lg:space-y-12 lg:block">
             <SearchInputMobile />
 
             <ShowSnipet />

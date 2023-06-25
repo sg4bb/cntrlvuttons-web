@@ -39,14 +39,8 @@ const ShowSnipet = () => {
    */
   const [clipControl, setClipControl] = useState(false);
 
-  const [showControl, setShowControl] = useState(false);
-
   useEffect(() => {
     setClipControl(false);
-
-    setTimeout(() => {
-      buttonSelected ? setShowControl(true) : setShowControl(false);
-    }, 50);
   }, [buttonSelected]);
 
   /**
@@ -59,7 +53,7 @@ const ShowSnipet = () => {
 
     setTimeout(() => {
       setClipControl(false);
-    }, 1000);
+    }, 3000);
   };
 
   return (
@@ -96,18 +90,25 @@ const ShowSnipet = () => {
             </div>
 
             <button
-              className="mt-2 lg:mt-auto flex items-center justify-center space-x-5 lg:block w-full lg:w-auto static lg:absolute lg:right-16 lg:top-14 outline outline-1 outline-secondary dark:outline-[#353a52] py-2 px-2 rounded-md bg-gray-300 dark:bg-primary hover:bg-secondary dark:hover:bg-[#2c3147]"
+              className="mt-2 lg:mt-auto lg:block w-full lg:w-auto static lg:absolute lg:right-16 lg:top-14 outline outline-1 outline-secondary dark:outline-[#353a52] py-2 px-2 rounded-md bg-gray-300 dark:bg-primary hover:bg-secondary dark:hover:bg-[#2c3147]"
               onClick={CopyButton}
             >
               {clipControl ? (
-                <>
-                  <CheckIcon className="stroke-purple-500 dark:stroke-emerald-400" />{" "}
-                  <h2 className="text-purple-500 dark:text-emerald-400 text-sm">
+                <div className="flex items-center justify-center space-x-5 lg:space-x-0 lg:block">
+                  <CheckIcon className="stroke-purple-500 dark:stroke-emerald-400 block lg:hidden" />
+                  <h2 className="text-purple-500 dark:text-emerald-400 text-sm font-medium block lg:hidden">
                     Copied!
                   </h2>
-                </>
+                  <CopyIcon
+                    className={`stroke-purple-500 dark:stroke-emerald-400 hidden lg:block`}
+                  />
+                </div>
               ) : (
-                <>
+                <div
+                  className={`${
+                    !buttonSelected && "invisible"
+                  } flex items-center justify-center space-x-5`}
+                >
                   <CopyIcon
                     className={`stroke-purple-500 dark:stroke-emerald-400`}
                   />
@@ -115,7 +116,7 @@ const ShowSnipet = () => {
                   <h2 className="block lg:hidden text-sm font-medium text-purple-500 dark:text-emerald-400">
                     Copy to the clipboard
                   </h2>
-                </>
+                </div>
               )}
             </button>
           </div>

@@ -32,7 +32,7 @@ const ButtonList = () => {
         } overflow-y-scroll overflow-x-hidden mx-2 md:mx-7 lg:mx-14 xl:mx-27 2xl:mx-56 px-12 md:px-8 lg:px-auto xl:px-auto 2xl:px-12`}
       >
         <div
-          className={`grid place-content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-24 md:gap-28`}
+          className={`grid place-content-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-24 md:gap-20 lg:gap-28`}
         >
           {buttonList.map((button, index) => (
             <ButtonItem button={button} key={index} scale="100" />
